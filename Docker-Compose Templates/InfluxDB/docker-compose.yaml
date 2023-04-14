@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    influxdb:
+        image: 'influxdb:latest'
+        container_name: PPLabs-InfluxDB-Prod
+        ports:
+            - '8086:8086'
+        volumes:
+            - ./Data:/var/lib/influxdb2
+            - ./Config:/etc/influxdb2
+        environment:
+            - DOCKER_INFLUXDB_INIT_MODE=setup
+            - DOCKER_INFLUXDB_INIT_USERNAME=adminuser
+            - DOCKER_INFLUXDB_INIT_PASSWORD=macoy123
+            - DOCKER_INFLUXDB_INIT_ORG=Organización
+            - DOCKER_INFLUXDB_INIT_BUCKET=Bucket
+        restart: always

@@ -1,0 +1,142 @@
+###################################### Ping hacia sitios web y servidores externos ######################################
+
+################# Documentación ####################
+# https://www.home-assistant.io/integrations/ping/ #
+
+# Esta integración envía, a través de la plataforma "binary_sensor", varios pings a determinados servicios o hosts,
+# en los que, además de guardar un estado binario (si está o no disponible), también almacena el tiempo utilizado en
+# milisegundos para dicha solicitud, en forma de atributo. 
+
+# El intérvalo predeterminado entre mediciones es de 5 minutos, pero ha sido configurado a 1s para esta prueba.
+# Por su parte, la cantidad de paquetes enviados por segundo, es solo uno. Modificable en el apartado "count".
+
+
+###### Ping - Pisapapeles ######
+  - platform: ping
+    host: pisapapeles.net
+    name: "Heartbeat - Pisapapeles"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Google ######
+  - platform: ping
+    host: google.com
+    name: "Heartbeat - Google"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Cloudflare ######
+  - platform: ping
+    host: cloudflare.com
+    name: "Heartbeat - Cloudflare"
+    count: 1
+    scan_interval: 1
+
+###### Ping - CERN ######
+  - platform: ping
+    host: www.home.cern
+    name: "Heartbeat - CERN"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Facebook ######
+  - platform: ping
+    host: facebook.com
+    name: "Heartbeat - Facebook"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Instagram ######
+  - platform: ping
+    host: instagram.com
+    name: "Heartbeat - Instagram"
+    count: 1
+    scan_interval: 1
+
+###### Ping - SpaceX ######
+  - platform: ping
+    host: spacex.com
+    name: "Heartbeat - SpaceX"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Starlink ######
+  - platform: ping
+    host: starlink.com
+    name: "Heartbeat - Starlink"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Tesla ######
+  - platform: ping
+    host: tesla.com
+    name: "Heartbeat - Tesla"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Amazon ######
+  - platform: ping
+    host: amazon.com
+    name: "Heartbeat - Amazon"
+    count: 1
+    scan_interval: 1
+
+###### Ping - TikTok ######
+  - platform: ping
+    host: tiktok.com
+    name: "Heartbeat - TikTok"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Twitter ######
+  - platform: ping
+    host: twitter.com
+    name: "Heartbeat - Twitter"
+    count: 1
+    scan_interval: 1
+
+###### Ping - YouTube ######
+  - platform: ping
+    host: youtube.com
+    name: "Heartbeat - YouTube"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Apple ######
+  - platform: ping
+    host: apple.com
+    name: "Heartbeat - Apple"
+    count: 1
+    scan_interval: 1
+
+###### Ping - Microsoft ######
+  - platform: ping
+    host: microsoft.com
+    name: "Heartbeat - Microsoft"
+    count: 1
+    scan_interval: 1
+
+###### Ping - WhatsApp ######
+  - platform: ping
+    host: whatsapp.com
+    name: "Heartbeat - WhatsApp"
+    count: 1
+    scan_interval: 1
+
+
+
+###################################### Ping hacia servidores/dispositivos en red local ######################################
+
+###### Ping - Router ######
+  - platform: ping
+    host: 0.0.0.0
+    name: "Heartbeat - RouterCasa"
+    count: 1
+    scan_interval: 1
+
+###### Ping - DNS Privado ######
+  - platform: ping
+    host: 0.0.0.0
+    name: "Heartbeat - DNS Privado"
+    count: 1
+    scan_interval: 1

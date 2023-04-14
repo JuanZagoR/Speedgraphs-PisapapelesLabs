@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  homeassistant:
+    container_name: PPLabs-HomeAssistant-Prod
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    environment:
+#      - DISABLE_JEMALLOC: true
+    volumes:
+      - ./Config:/config
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+#      - /dev/ttyUSB0:/dev/ttyUSB0
+    restart: unless-stopped
+    privileged: true
+    network_mode: host

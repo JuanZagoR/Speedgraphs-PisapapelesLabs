@@ -1,0 +1,44 @@
+###################################### Configuración de Home Assistant ######################################
+
+################## Documentación ####################
+# https://www.home-assistant.io/docs/configuration/ #
+
+# Este es el archivo de configuración de Home Assistant. Contiene tanto las configuraciones correspondientes
+# a las automatizaciones, scripts y escenas, así como de las integraciones que requieren algunos ajustes
+# extra para funcionar. Para simplificarlo, dichos ajustes han sido divididos en "módulos", que no son más
+# que archivos "referenciados" en el presente documento, de manera que sean cargados como parte de él.
+
+# Entre los "módulos" requeridos para Speedgraphs, se encuentran:
+#   - InfluxDB (base de datos externa, ver influxdb.yaml)
+#   - Iperf3 (Pruebas de velocidad a servidor privado, ver iperf3.yaml)
+#   - Fast.com (Pruebas de velocidad de internet, desde Netflix, ver fastdotcom.yaml)
+#   - binary_sensor (Incluye pruebas de ping, ver heartbeat.yaml para más información)
+
+
+###### Inicio de configuración de Home Assistant ###### 
+default_config:
+
+
+###### Automatizaciones, scripts y escenas ######
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+
+###### Proxy HTTP ######
+http: !include http.yaml
+
+
+###### Speedgraphs - PisapapelesLabs ######
+   ### Configuración de InfluxDB ###
+influxdb: !include influxdb.yaml
+
+   ### Configuración de Iperf3 ###
+iperf3: !include iperf3.yaml
+
+   ### Configuración para Fast.com ###
+fastdotcom: !include fastdotcom.yaml
+
+   ### Entidades de Ping ###
+binary_sensor: 
+ - !include heartbeat.yaml

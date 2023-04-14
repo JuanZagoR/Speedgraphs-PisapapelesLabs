@@ -1,0 +1,39 @@
+###################################### Configuración de Iperf3 ######################################
+
+################### Documentación ####################
+# https://www.home-assistant.io/integrations/iperf3/ #
+
+# La integración realiza, por defecto, mediciones periódicas de velocidad, o bien, ejecutadas 
+# de manera manual, llamando el servicio a través de automatizaciones. En este caso, usaremos el modo
+# manual para programar el horario de ejecución junto a los otros servicios, sin que lleguen a 
+# solaparse en el proceso. En caso de querer activar nuevamente los ajustes predeterminados, solo es
+# necesario comentar la línea correspondiente con "false", y eliminar el "#" referente al intérvalo 
+# de escaneo, para habilitarlo nuevamente.
+
+
+
+###### Configuración de hosts o direcciones IP (en caso de usar más de un servidor) ######
+ hosts:
+  - host: 0.0.0.0
+    port: 5201
+    parallel: 1
+
+###### Parámetros a monitorear ######
+ monitored_conditions:
+  - download
+  - upload
+
+####### Duración de la prueba (por defecto, 10 segundos) ######
+ duration: 10
+
+###### Modo manual o automático ######
+ manual: true
+
+###### Activación periódica de servicio ######
+# scan_interval:
+#  days: 0
+#  hours: 0
+#  minutes: 60
+#  seconds: 0
+#  milliseconds: 0
+

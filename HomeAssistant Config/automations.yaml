@@ -1,0 +1,28 @@
+# [En construcción]
+- id: '1674262565638'
+  alias: Speedgraphs-PisapapelesLabs
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: '30'
+  condition: []
+  action:
+  - service: fastdotcom.speedtest
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 15
+      milliseconds: 0
+  - service: iperf3.speedtest
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 15
+      milliseconds: 0
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      device_id: 07f234732cd4fddc67f02338b2e086f6
+  mode: single

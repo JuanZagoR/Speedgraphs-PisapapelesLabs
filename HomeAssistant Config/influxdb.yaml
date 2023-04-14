@@ -1,0 +1,46 @@
+###################################### Configuración de InfluxDB ######################################
+
+#################### Documentación #####################
+# https://www.home-assistant.io/integrations/influxdb/ #
+
+# La integración con InfluxDB permite almacenar datos provenientes de las entidades de Home Assistant
+# dentro de una base de datos externa, con la capacidad de ser procesados o revisados mediante
+# aplicaciones o servicios externos. En nuestro caso, es la "puerta" entre Home Assistant y Grafana.
+
+# En este archivo de configuración, será referenciado InfluxDB 2.x, debido a que se trata de la versión
+# más reciente de esta base de datos. Para InfluxDB 1.x, revisar la documentación oficial antes listada.
+
+
+
+###### Versión de API a utilizar ######
+api_version: 2
+
+###### Activar o desactivar conexión HTTPS ######
+ssl: true
+
+###### Dirección IP y puerto, o dominio donde se encuentra InfluxDB ######
+host: influxdb.paginadeprueba.com
+#port: 8086
+
+###### Token de acceso, organización y "bucket" donde se almacenarán los datos ######
+token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+organization: xxxxxxxxxxxxxxxx
+bucket: Bucket
+default_measurement: units
+tags:
+  source: HomeAssistant
+
+###### Lista de entidades incluidas y excluidas ######
+exclude:
+  entities:
+   - zone.home
+  domains:
+    - persistent_notification
+    - person
+include:
+  domains:
+    - sensor
+    - binary_sensor
+    - sun
+  entities:
+    - weather.home

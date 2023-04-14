@@ -1,0 +1,24 @@
+###################################### Configuración de Fast.com ######################################
+
+##################### Documentación ######################
+# https://www.home-assistant.io/integrations/fastdotcom/ #
+
+# Este servicio realiza, por defecto, mediciones automáticas de velocidad, o bien, ejecutadas 
+# de manera manual, llamando la entidad a través de automatizaciones. En este caso, usaremos el modo
+# manual para programar el horario de ejecución junto a los otros servicios, sin que lleguen a 
+# solaparse en el proceso. En caso de querer activar nuevamente los ajustes predeterminados, solo es
+# necesario comentar la línea correspondiente con "false", y eliminar el "#" referente al intérvalo 
+# de escaneo, para habilitarlo nuevamente.
+
+
+
+###### Modo manual o automático ######
+ manual: true
+
+###### Activación periódica de servicio ######
+# scan_interval:
+#  days: 0
+#  hours: 0
+#  minutes: 60
+#  seconds: 0
+#  milliseconds: 0

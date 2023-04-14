@@ -1,0 +1,24 @@
+###################################### Configuración HTTP y proxy ######################################
+
+################# Documentación ####################
+# https://www.home-assistant.io/integrations/http/ #
+
+# Si el proxy se encuentra en el mismo servidor de Home Assistant, se recomienda añadir la siguiente línea
+# para restringir todas las conexiones externas, y solo autorizar el acceso a través del proxy. 
+
+###### Escucha de solicitudes desde direcciones específicas ######
+#  server_host: 127.0.0.1
+
+
+# En este apartado, es necesario especificar la dirección IP del proxy, para autorizar su uso.
+# Si el proxy se encuentra alojado en otro servidor, es necesario especificar la dirección IP correspondiente.
+# Si está en el mismo servidor de Home Assistant, es necesario especificar "localhost", o "127.0.0.1"
+# También se puede utilizar una máscara de subred. 
+
+###### Proxy confiable ######
+  trusted_proxies:
+    - 192.168.0.1      
+#    - 192.168.0.1/24
+
+###### Transferencia de dirección IP cliente desde proxy a host ######
+  use_x_forwarded_for: true
