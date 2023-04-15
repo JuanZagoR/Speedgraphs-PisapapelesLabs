@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    iperf3:
+        image: mlabbe/iperf3
+        container_name: PPLabs-iPerf3-Prod
+        network_mode: bridge
+        ports:
+            - '5201:5201/tcp'
+            - '5201:5201/udp'
+        restart: unless-stopped

@@ -3,6 +3,7 @@ services:
     influxdb:
         image: 'influxdb:latest'
         container_name: PPLabs-InfluxDB-Prod
+        network_mode: bridge
         ports:
             - '8086:8086'
         volumes:
