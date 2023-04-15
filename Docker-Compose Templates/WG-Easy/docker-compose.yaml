@@ -1,3 +1,8 @@
+###################################### Plantilla de WG-Easy ######################################
+
+############# Documentación #################
+# https://hub.docker.com/r/weejewel/wg-easy #
+
 version: '3.3'
 services:
     wg-easy:
