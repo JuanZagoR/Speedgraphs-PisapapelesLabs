@@ -1,3 +1,8 @@
+###################################### Plantilla de WG-Easy ######################################
+
+############ Documentación ###############
+# https://hub.docker.com/r/mlabbe/iperf3 #
+
 version: '3.3'
 services:
     iperf3:
