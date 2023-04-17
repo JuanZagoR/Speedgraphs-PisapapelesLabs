@@ -1,5 +1,14 @@
 {
     "files.associations": {
-        "docker-compose.yaml": "dockercompose"
+        "docker-compose.yaml": "dockercompose",
+        "automations.yaml": "home-assistant",
+        "configuration.yaml": "home-assistant",
+        "fastdotcom.yaml": "home-assistant",
+        "heartbeat.yaml": "home-assistant",
+        "http.yaml": "home-assistant",
+        "influxdb.yaml": "home-assistant",
+        "iperf3.yaml": "home-assistant",
+        "*.drawio": "drawio",
+        "*.md": "markdown"
     }
 }
