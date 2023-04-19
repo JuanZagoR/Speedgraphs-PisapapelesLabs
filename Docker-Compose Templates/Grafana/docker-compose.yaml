@@ -1,0 +1,30 @@
+###################################### Plantilla de Grafana ######################################
+
+########## Documentación ###########
+# https://grafana.com/docs/grafana #
+
+version: '3.3'
+services:
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: PPLabs-Grafana-Prod
+    network_mode: bridge
+    ports:
+      - 3000:3000
+    volumes:
+      - PPLabs-Grafana-Prod:/var/lib/grafana
+    environment:
+      - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+      - GF_PATHS_DATA=/var/lib/grafana
+      - GF_PATHS_HOME=/usr/share/grafana
+      - GF_PATHS_LOGS=/var/log/grafana
+      - GF_PATHS_PLUGINS=/var/lib/grafana/plugins
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_RENDERING_SERVER_URL=https://example.com/render
+      - GF_RENDERING_CALLBACK_URL=https://example.com
+      - GF_LOG_FILTERS=rendering:debug
+    user: '104'
+
+volumes:
+    PPLabs-Grafana-Prod:
+        external: true
