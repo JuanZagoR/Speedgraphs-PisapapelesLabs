@@ -1,0 +1,1106 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "description": "",
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 3,
+    "links": [],
+    "liveNow": true,
+    "panels": [
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "EIYWfIAVz"
+        },
+        "description": "Latencias hacia sitios web para el operador X, desde VM0.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu"
+            },
+            "mappings": [],
+            "noValue": "error",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#FA6400",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Amazon"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "orange",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Cloudflare"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#c93bae",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Instagram"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#727272",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Starlink"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#00bbff",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Twitter"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#393939",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Apple"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1F60C4",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Facebook"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-purple",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Pisapapeles"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#902632",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Tesla"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-green",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "WhatsApp"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "light-blue",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "CERN"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_google\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Google"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#080808",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "SpaceX"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#351f4d",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "TikTok"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-red",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "YouTube"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 123131,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "value_and_name"
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "EIYWfIAVz"
+            },
+            "query": "from(bucket: \"HomeAssistant-Casa\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_youtube\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_avg\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Latencias/Ping promedio hacia sitios (HAOS-TestJZ-TestDB)",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "EIYWfIAVz"
+        },
+        "description": "Pruebas de velocidad de carga y descarga de datos para el operador X, desde VM0.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-BlPu",
+              "seriesBy": "last"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "series",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 29,
+              "gradientMode": "hue",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "pointSize": 4,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "always",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "Mbps"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-red",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Fast (Descarga)"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-blue",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Speedtest (Descarga)"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "value {domain=\"sensor\", entity_id=\"speedtest_upload\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-purple",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Speedtest (Carga)"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 12,
+          "x": 0,
+          "y": 5
+        },
+        "id": 123126,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "EIYWfIAVz"
+            },
+            "query": "from(bucket: \"HomeAssistant-Casa\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\" or r[\"entity_id\"] == \"speedtest_upload\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Pruebas de velocidad (HAOS-TestJZ-TestDB)",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "EIYWfIAVz"
+        },
+        "description": "Latencias hacia sitios web para el operador X, desde VM0.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "series",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "hue",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 2,
+              "pointSize": 4,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "always",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "decimals": 0,
+            "mappings": [],
+            "noValue": "error",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#FA6400",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Amazon"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "orange",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Cloudflare"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#c93bae",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Instagram"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#727272",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Starlink"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#00bbff",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Twitter"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#393939",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Apple"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1F60C4",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Facebook"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-purple",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Pisapapeles"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#902632",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Tesla"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-green",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "WhatsApp"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "light-blue",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "CERN"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_google\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "green",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "Google"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#080808",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "SpaceX"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#351f4d",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "TikTok"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "round_trip_time_avg {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\"}"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-red",
+                    "mode": "fixed"
+                  }
+                },
+                {
+                  "id": "displayName",
+                  "value": "YouTube"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 12,
+          "x": 12,
+          "y": 5
+        },
+        "id": 123132,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "EIYWfIAVz"
+            },
+            "query": "from(bucket: \"HomeAssistant-Casa\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_youtube\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_avg\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Latencias/Ping promedio hacia sitios (HAOS-TestJZ-TestDB)",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "EIYWfIAVz"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "semi-dark-blue",
+                  "value": 15
+                },
+                {
+                  "color": "semi-dark-green",
+                  "value": 20
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 30
+                },
+                {
+                  "color": "#EF843C",
+                  "value": 100
+                },
+                {
+                  "color": "red",
+                  "value": 200
+                },
+                {
+                  "color": "dark-red",
+                  "value": 300
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 4,
+          "x": 0,
+          "y": 19
+        },
+        "id": 123128,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "EIYWfIAVz"
+            },
+            "query": "from(bucket: \"HomeAssistant-Casa\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_google\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_avg\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"binary_sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Heartbeat/Ping Test - Google (Promedio)",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "EIYWfIAVz"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "semi-dark-blue",
+                  "value": 15
+                },
+                {
+                  "color": "semi-dark-green",
+                  "value": 20
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 30
+                },
+                {
+                  "color": "#EF843C",
+                  "value": 100
+                },
+                {
+                  "color": "red",
+                  "value": 200
+                },
+                {
+                  "color": "dark-red",
+                  "value": 300
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 4,
+          "x": 4,
+          "y": 19
+        },
+        "id": 123129,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "EIYWfIAVz"
+            },
+            "query": "from(bucket: \"HomeAssistant-Casa\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_google\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_avg\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"binary_sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Heartbeat/Ping Test - Google (Actual)",
+        "type": "stat"
+      }
+    ],
+    "refresh": false,
+    "schemaVersion": 37,
+    "style": "dark",
+    "tags": [
+      "Pisapapeles Labs",
+      "Producción"
+    ],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-2d",
+      "to": "now"
+    },
+    "timepicker": {
+      "hidden": true,
+      "refresh_intervals": [],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "type": "timepicker"
+    },
+    "timezone": "browser",
+    "title": "Speedtest Operadores - PisapapelesLabs",
+    "uid": "LVSYm40Vz",
+    "version": 41,
+    "weekStart": ""
+  }
