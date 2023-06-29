@@ -20,4 +20,6 @@ services:
             - DOCKER_INFLUXDB_INIT_PASSWORD=macoy123
             - DOCKER_INFLUXDB_INIT_ORG=Organización
             - DOCKER_INFLUXDB_INIT_BUCKET=Bucket
+        stdin_open: true
+        tty: true
         restart: always

@@ -1,0 +1,3648 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "dark-green",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 21,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "## \r\n### ⠀![Image](https://static3.pisapapeles.net/uploads/2019/03/cropped-cropped-logosoloblanco512x512v2-32x32.png) Speedgraphs",
+        "mode": "markdown"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "id": 23,
+      "panels": [],
+      "title": "Operador 1",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Amazon"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Apple"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#585858",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "CERN"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Cloudflare"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Facebook"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0f418c",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_google\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Google"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Instagram"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d62976",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_microsoft\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Microsoft"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#878787",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Pisapapeles"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "SpaceX"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#121212",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Starlink"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#b2b2b2",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Tesla"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff0000",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "TikTok"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4a2a8b",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Twitter"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "WhatsApp"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "YouTube"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_microsoft\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_youtube\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_max\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: true)\r\n  |> yield(name: \"max\")",
+          "refId": "A"
+        }
+      ],
+      "title": "↱↲ Ping a servicios - Operador 1",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 6,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Amazon"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Apple"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#585858",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "CERN"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Cloudflare"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Facebook"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0f418c",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_google\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Google"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Instagram"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d62976",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_microsoft\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Microsoft"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#878787",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Pisapapeles"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "SpaceX"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#121212",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Starlink"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#b2b2b2",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Tesla"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff0000",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "TikTok"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#4a2a8b",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Twitter"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "WhatsApp"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "YouTube"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.7",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_microsoft\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_youtube\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_max\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: true)\r\n  |> yield(name: \"max\")",
+          "refId": "A"
+        }
+      ],
+      "title": "↱↲ Ping a servicios - Operador 1",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "bars",
+            "fillOpacity": 100,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Fast"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 12,
+        "x": 0,
+        "y": 17
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡇 Descarga - Operador 1",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "bars",
+            "fillOpacity": 100,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "noValue": "-",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_upload\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 12,
+        "x": 12,
+        "y": 17
+      },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"upload_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"upload_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"speedtest_upload\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡅 Carga - Operador 1",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_upload\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 0,
+        "y": 30
+      },
+      "id": 24,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "max"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"upload_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"upload_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"speedtest_upload\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡅 Carga (Máximo) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_upload\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 8,
+        "y": 30
+      },
+      "id": 26,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"upload_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"upload_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"speedtest_upload\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡅 Carga (Promedio) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"upload_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_upload\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 30
+      },
+      "id": 28,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "min"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"upload_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"upload_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"speedtest_upload\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡅 Carga (Mínimo) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Fast"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 34
+      },
+      "id": 12,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "max"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡇 Descarga (Máximo) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Fast"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 34
+      },
+      "id": 25,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡇 Descarga (Promedio) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "PPLabs-SP2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Fast"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 34
+      },
+      "id": 27,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "min"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: true)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "🡇 Descarga (Mínimo) - Operador 1",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value {domain=\"sensor\", entity_id=\"speedtest_ping\", source=\"Test1\"}"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ookla Speedtest"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 0,
+        "y": 39
+      },
+      "id": 29,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.0-cloud.5.a016665c",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"ms\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"speedtest_ping\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test1\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "↱↲ Ping Ookla Speedtest - Operador 1",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 43
+      },
+      "id": 22,
+      "panels": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "fixed"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "ms"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Amazon"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Apple"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#585858",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "CERN"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Cloudflare"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Facebook"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#0f418c",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_google\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Google"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Instagram"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#d62976",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_microsoft\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Microsoft"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#878787",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Pisapapeles"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "SpaceX"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#121212",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Starlink"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#b2b2b2",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Tesla"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#ff0000",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "TikTok"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#4a2a8b",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Twitter"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "light-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "WhatsApp"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "YouTube"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 8,
+            "x": 0,
+            "y": 4
+          },
+          "id": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "9.5.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test2\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_microsoft\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_youtube\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_max\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"max\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Ping a servicios - Operador 2",
+          "transparent": true,
+          "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "opacity",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineStyle": {
+                  "fill": "solid"
+                },
+                "lineWidth": 1,
+                "pointSize": 10,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "Mbits"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP2"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP1"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Fast"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test2\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Ookla Speedtest"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 16,
+            "x": 8,
+            "y": 4
+          },
+          "id": 8,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test2\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Velocidad de descarga - Operador 2",
+          "transparent": true,
+          "type": "timeseries"
+        }
+      ],
+      "title": "Operador 2",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 44
+      },
+      "id": 21,
+      "panels": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "opacity",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineWidth": 1,
+                "pointSize": 10,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "Mbits"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP2"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP1"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Fast"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Ookla Speedtest"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 16,
+            "x": 0,
+            "y": 5
+          },
+          "id": 9,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test3\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Velocidad de descarga - Operador 3",
+          "transparent": true,
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "fixed"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "ms"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Amazon"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Apple"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#585858",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "CERN"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Cloudflare"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Facebook"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#0f418c",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_google\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Google"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Instagram"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#d62976",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_microsoft\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Microsoft"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#878787",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Pisapapeles"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "SpaceX"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#121212",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Starlink"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#b2b2b2",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Tesla"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#ff0000",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "TikTok"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#4a2a8b",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Twitter"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "light-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "WhatsApp"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\", source=\"Test3\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "YouTube"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 8,
+            "x": 16,
+            "y": 5
+          },
+          "id": 4,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "9.5.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test3\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_microsoft\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_youtube\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_max\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"max\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Ping a servicios - Operador 3",
+          "transparent": true,
+          "type": "stat"
+        }
+      ],
+      "title": "Operador 3",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 45
+      },
+      "id": 20,
+      "panels": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "fixed"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "ms"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_amazon\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Amazon"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_apple\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Apple"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#585858",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cern\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "CERN"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_cloudflare\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Cloudflare"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "orange",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_facebook\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Facebook"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#0f418c",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_google\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Google"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_instagram\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Instagram"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#d62976",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_microsoft\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Microsoft"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#878787",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_pisapapeles\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Pisapapeles"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_spacex\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "SpaceX"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#121212",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_starlink\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Starlink"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#b2b2b2",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tesla\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Tesla"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#ff0000",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_tiktok\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "TikTok"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#4a2a8b",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_twitter\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Twitter"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "light-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_whatsapp\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "WhatsApp"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-green",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "round_trip_time_max {domain=\"binary_sensor\", entity_id=\"heartbeat_youtube\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "YouTube"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 8,
+            "x": 0,
+            "y": 6
+          },
+          "id": 5,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "9.5.1",
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test4\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"heartbeat_amazon\" or r[\"entity_id\"] == \"heartbeat_apple\" or r[\"entity_id\"] == \"heartbeat_cern\" or r[\"entity_id\"] == \"heartbeat_cloudflare\" or r[\"entity_id\"] == \"heartbeat_facebook\" or r[\"entity_id\"] == \"heartbeat_google\" or r[\"entity_id\"] == \"heartbeat_instagram\" or r[\"entity_id\"] == \"heartbeat_microsoft\" or r[\"entity_id\"] == \"heartbeat_pisapapeles\" or r[\"entity_id\"] == \"heartbeat_spacex\" or r[\"entity_id\"] == \"heartbeat_starlink\" or r[\"entity_id\"] == \"heartbeat_tesla\" or r[\"entity_id\"] == \"heartbeat_tiktok\" or r[\"entity_id\"] == \"heartbeat_twitter\" or r[\"entity_id\"] == \"heartbeat_whatsapp\" or r[\"entity_id\"] == \"heartbeat_youtube\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"round_trip_time_max\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"units\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"max\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Ping a servicios - Operador 4",
+          "transparent": true,
+          "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "opacity",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineWidth": 1,
+                "pointSize": 10,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "Mbits"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest2_pisapapeleslabs_com\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP2"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"download_speedtest_pisapapeleslabs_com\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "PPLabs-SP1"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-purple",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"fast_com_download\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Fast"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-red",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "value {domain=\"sensor\", entity_id=\"speedtest_download\", source=\"Test4\"}"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Ookla Speedtest"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 15,
+            "w": 16,
+            "x": 8,
+            "y": 6
+          },
+          "id": 10,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "c519f304-f26e-4b65-890d-dee772e98fbe"
+              },
+              "query": "from(bucket: \"Testing\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"source\"] == \"Test4\")\r\n  |> filter(fn: (r) => r[\"entity_id\"] == \"download_speedtest2_pisapapeleslabs_com\" or r[\"entity_id\"] == \"download_speedtest_pisapapeleslabs_com\" or r[\"entity_id\"] == \"fast_com_download\" or r[\"entity_id\"] == \"speedtest_download\")\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Mbit/s\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"domain\"] == \"sensor\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+              "refId": "A"
+            }
+          ],
+          "title": "Velocidad de descarga - Operador 4",
+          "transparent": true,
+          "type": "timeseries"
+        }
+      ],
+      "title": "Operador 4",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 46
+      },
+      "id": 19,
+      "panels": [],
+      "title": "Comparativa",
+      "type": "row"
+    }
+  ],
+  "refresh": "5s",
+  "revision": 1,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {
+    "hidden": false,
+    "refresh_intervals": [
+      "5s"
+    ]
+  },
+  "timezone": "",
+  "title": "Speedgraphs - Test",
+  "uid": "speedgraphs",
+  "version": 5,
+  "weekStart": ""
+}
