@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+echo "Actualizando repositorios..."
+sleep 2
+sudo apt update && echo "Repositorios actualizados" || echo "Hubo un problema al actualizar repositorios"
+sleep 2
+echo "Los siguientes paquetes serán actualizados:"
+sleep 2
+sudo apt list --upgradable
+sleep 5
+echo "Actualizando paquetes..."
+sleep 2
+sudo apt upgrade -y && echo "Paquetes actualizados" || echo "Hubo un problema al actualizar los paquetes"
+echo "Instalando paquetes pendientes..."
+sleep 2
+sudo apt install sudo docker.io docker-compose net-tools wget curl -y && echo "Dependencias instaladas correctamente" || echo "Hubo un problema al instalar dependencias"
+echo "Creando carpetas y descargando imagen de Home Assistant"
+sleep 2
+sudo mkdir -p /mnt/Docker/Speedgraphs
+sudo chmod 777 -R /mnt/Docker/Speedgraphs
+cd /mnt/Docker/Speedgraphs && echo "Directorios creados" || echo "Error al acceder al directorio"
+echo "Obteniendo la última imagen de Home Assistant, desde GHCR..."
+sleep 2
+docker pull ghcr.io/home-assistant/home-assistant:stable && echo "Imagen descargada correctamente" || echo "Hubo un problema al descargar la imagen"
+wget docker-compose.yaml
+docker-compose up -d
