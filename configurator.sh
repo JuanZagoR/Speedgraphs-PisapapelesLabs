@@ -27,8 +27,7 @@ sleep 2
 wget https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/Docker-Compose%20Templates/HomeAssistant/docker-compose.yaml && echo "Plantilla  descargada correctamente" || echo "Hubo un problema al descargar la plantilla"
 sleep 2
 echo "Creando contenedor a partir de plantilla..."
-docker-compose up -d
-echo "Contenedor creado, revisando estado..."
+docker-compose up -d && echo "Contenedor creado, revisando estado..." || echo "Hubo un problema al crear el contenedor"
 sleep 5
 docker status PPLabs-HomeAssistant-Prod
 echo "Script finalizado, configure la instancia de Home Assistant, y posteriormente, ejecute el segundo script"
