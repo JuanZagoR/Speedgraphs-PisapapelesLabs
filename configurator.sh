@@ -1,33 +1,52 @@
 #!/bin/sh
 set -e
-echo "Actualizando repositorios..."
+echo -e "\e[1;35mSpeedgraphs - Pisapapeles Labs\e[0m"
 sleep 2
-sudo apt update && echo "Repositorios actualizados" || echo "Hubo un problema al actualizar repositorios"
+
+echo -e "\e[0;32mComprobando permisos...\e[0m"
+if [[ $EUID -ne 0 ]]; then
+   echo -e "\e[0;31mPara usar este script, es necesario elevar permisos. Use 'sudo bash "$0"' en su lugar\e[0m" 1>&2
+   exit 1
+fi
+
+echo -e "\e[0;32mActualizando repositorios...\e[1;30m"
 sleep 2
-echo "Los siguientes paquetes serán actualizados:"
+sudo apt update && echo "Repositorios actualizados" || echo -e "\e[0;31mHubo un problema al actualizar repositorios\e[0m"
+
+sleep 2
+echo -e "\e[0;32mLos siguientes paquetes serán actualizados:\e[0m"
+
 sleep 2
 sudo apt list --upgradable
+
 sleep 5
-echo "Actualizando paquetes..."
+echo -e "\e[0;32mActualizando paquetes...\e[0m"
+
 sleep 2
-sudo apt upgrade -y && echo "Paquetes actualizados" || echo "Hubo un problema al actualizar los paquetes"
-echo "Instalando paquetes pendientes..."
+sudo apt upgrade -y && echo -e "\e[0;32mPaquetes actualizados\e[0m" || echo -e "\e[0;31mHubo un problema al actualizar los paquetes\e[0m"
+echo -e "\e[0;32mInstalando paquetes pendientes...\e[0m"
+
 sleep 2
-sudo apt install sudo docker.io docker-compose net-tools wget curl -y && echo "Dependencias instaladas correctamente" || echo "Hubo un problema al instalar dependencias"
-echo "Creando carpetas y descargando imagen de Home Assistant"
+sudo apt install sudo docker.io docker-compose net-tools wget curl -y && echo -e "\e[0;32mDependencias instaladas correctamente\e[0m" || echo -e "\e[0;31mHubo un problema al instalar dependencias\e[0m"
+echo -e "\e[0;32mCreando carpetas y descargando imagen de Home Assistant\e[0m"
+
 sleep 2
 sudo mkdir -p /mnt/Docker/Speedgraphs
 sudo chmod 777 -R /mnt/Docker/Speedgraphs
-cd /mnt/Docker/Speedgraphs && echo "Directorios creados" || echo "Error al acceder al directorio"
-echo "Obteniendo la última imagen de Home Assistant, desde GHCR..."
+cd /mnt/Docker/Speedgraphs && echo "Directorios creados\e[0m" || echo -e "\e[0;31mError al acceder al directorio\e[0m"
+echo -e "\e[0;32mObteniendo la última imagen de Home Assistant, desde GHCR...\e[0m"
+
 sleep 2
-docker pull ghcr.io/home-assistant/home-assistant:stable && echo "Imagen descargada correctamente" || echo "Hubo un problema al descargar la imagen"
-echo "Obteniendo plantilla de Docker-Compose desde repositorio"
+docker pull ghcr.io/home-assistant/home-assistant:stable && echo -e "\e[0;32mImagen descargada correctamente\e[0m" || echo -e "\e[0;31mHubo un problema al descargar la imagen\e[0m"
+echo -e "\e[0;32mObteniendo plantilla de Docker-Compose desde repositorio\e[0m"
+
 sleep 2
-wget https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/Docker-Compose%20Templates/HomeAssistant/docker-compose.yaml && echo "Plantilla  descargada correctamente" || echo "Hubo un problema al descargar la plantilla"
+wget https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/Docker-Compose%20Templates/HomeAssistant/docker-compose.yaml && echo -e "\e[0;32mPlantilla  descargada correctamente\e[0m" || echo -e "\e[0;31mHubo un problema al descargar la plantilla\e[0m"
+
 sleep 2
-echo "Creando contenedor a partir de plantilla..."
-docker-compose up -d && echo "Contenedor creado, revisando estado..." || echo "Hubo un problema al crear el contenedor"
+echo -e "\e[0;32mCreando contenedor a partir de plantilla...\e[0m"
+docker-compose up -d && echo -e "\e[0;32mContenedor creado, revisando estado...\e[0m" || echo -e "\e[0;31mHubo un problema al crear el contenedor\e[0m"
+
 sleep 5
-docker status PPLabs-HomeAssistant-Prod
-echo "Script finalizado, configure la instancia de Home Assistant, y posteriormente, ejecute el segundo script"
+docker logs PPLabs-HomeAssistant-Prod
+echo -e "\e[1;34mConfigura la instancia de Home Assistant de este servidor, a través de http://$(hostname  -I | cut -f1 -d' '):8123\e[0m"
