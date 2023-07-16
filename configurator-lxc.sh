@@ -33,7 +33,7 @@ sudo apt install sudo net-tools wget curl -y && echo -e "\e[0;32m✔ Dependencia
 sleep 2
 echo -e "\e[1;36m➤ Instalando la última versión de Docker (Community Edition) desde el sitio oficial...\e[1;30m"
 sudo curl -fsSL https://get.docker.com/ | sudo bash -s
-echo -e "\e[0;32m✔ Docker-CE ha sido instalado\e[0m" || echo -e "\e[0;31m✖ Error al instalar Docker-CE\e[0m"
+echo -e "\e[0;32m✔ Se ha instalado la última versión de Docker-CE\e[0m" || echo -e "\e[0;31m✖ Error al instalar la última versión de Docker-CE\e[0m"
 
 sleep 2
 echo -e "\e[1;36m➤ Creando carpetas y descargando imagen de Home Assistant\e[0m"
