@@ -8,6 +8,7 @@ if [[ $EUID -ne 0 ]]; then
    echo -e "\e[0;31mPara usar este script, es necesario elevar permisos. Use 'sudo bash "$0"' en su lugar\e[0m" 1>&2
    exit 1
 fi
+echo -e "\e[0;32m✔ El script se está ejecutando con permisos de administrador\e[0m"
 
 echo -e "\e[1;36m➤ Actualizando repositorios...\e[1;30m"
 sleep 2
