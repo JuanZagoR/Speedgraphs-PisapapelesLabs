@@ -30,7 +30,7 @@ sleep 2
 sudo apt install sudo net-tools wget curl -y && echo -e "\e[0;32mDependencias instaladas correctamente\e[0m" || echo -e "\e[0;31mHubo un problema al instalar dependencias\e[0m"
 
 sleep 2
-echo -e "\e[0;32mInstalando Docker Community Edition desde el sitio oficial...\e[0m"
+echo -e "\e[0;32mInstalando la última versión de Docker (Community Edition) desde el sitio oficial...\e[0m"
 sudo curl -fsSL https://get.docker.com/ | sudo bash -s
 echo -e "\e[0;32mDocker-CE ha sido instalado\e[0m" || echo -e "\e[0;31mError al instalar Docker-CE\e[0m"
 
