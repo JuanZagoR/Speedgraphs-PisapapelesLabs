@@ -1,7 +1,8 @@
-# Speedgraphs - Pisapapeles Labs
+
+![PPLogo](https://static3.pisapapeles.net/uploads/2019/03/cropped-cropped-logosoloblanco512x512v2-32x32.png) <font size="7"> **Speedgraphs - Pisapapeles Labs** </font>
+
+
 Documentación, scripts, dashboards y configuraciones para comprobar velocidades, estabilidad y latencias en operadores de internet (ISP), usando Home Assistant, Grafana e InfluxDB. 
-
-
 
 ## Propósito
 Este proyecto nació como parte de un conjunto de pruebas de velocidad y estabilidad para uso interno dentro de Pisapapeles Networks. 
