@@ -33,7 +33,7 @@ echo -e "\e[0;32mCreando carpetas y descargando imagen de Home Assistant\e[0m"
 sleep 2
 sudo mkdir -p /mnt/Docker/Speedgraphs
 sudo chmod 777 -R /mnt/Docker/Speedgraphs
-cd /mnt/Docker/Speedgraphs && echo "Directorios creados\e[0m" || echo -e "\e[0;31mError al acceder al directorio\e[0m"
+cd /mnt/Docker/Speedgraphs && echo echo -e "\e[0;32mDirectorios creados\e[0m" || echo -e "\e[0;31mError al acceder al directorio\e[0m"
 echo -e "\e[0;32mObteniendo la última imagen de Home Assistant, desde GHCR...\e[0m"
 
 sleep 2

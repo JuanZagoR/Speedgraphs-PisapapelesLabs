@@ -30,14 +30,15 @@ sleep 2
 sudo apt install sudo net-tools wget curl -y && echo -e "\e[0;32mDependencias instaladas correctamente\e[0m" || echo -e "\e[0;31mHubo un problema al instalar dependencias\e[0m"
 
 sleep 2
-echo -e "\e[0;32mInstalando Docker desde el sitio oficial...\e[0m"
+echo -e "\e[0;32mInstalando Docker Community Edition desde el sitio oficial...\e[0m"
 sudo curl -fsSL https://get.docker.com/ | sudo bash -s
+echo -e "\e[0;32mDocker-CE ha sido instalado\e[0m" || echo -e "\e[0;31mError al instalar Docker-CE\e[0m"
 
 sleep 2
 echo -e "\e[0;32mCreando carpetas y descargando imagen de Home Assistant\e[0m"
 sudo mkdir -p /mnt/Docker/Speedgraphs
 sudo chmod 777 -R /mnt/Docker/Speedgraphs
-cd /mnt/Docker/Speedgraphs && echo "Directorios creados\e[0m" || echo -e "\e[0;31mError al acceder al directorio\e[0m"
+cd /mnt/Docker/Speedgraphs && echo -e "\e[0;32mDirectorios creados\e[0m" || echo -e "\e[0;31mError al acceder al directorio\e[0m"
 echo -e "\e[0;32mObteniendo la última imagen de Home Assistant, desde GHCR...\e[0m"
 
 sleep 2
