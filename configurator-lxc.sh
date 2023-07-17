@@ -31,6 +31,8 @@ echo -e "\e[1;36m➤ Actualizando paquetes...\e[1;30m"
 
 sleep 2
 sudo apt upgrade -qqqy && echo -e "\e[0;32m✔ Paquetes actualizados\e[0m" || echo -e "\e[0;31m✖ Hubo un problema al actualizar los paquetes\e[0m"
+
+echo
 echo -e "\e[1;36m➤ Instalando dependencias faltantes...\e[1;30m"
 
 sleep 2
