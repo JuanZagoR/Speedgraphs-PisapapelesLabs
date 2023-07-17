@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 echo -e "\e[1;35mSpeedgraphs - Pisapapeles Labs\e[0m"
 sleep 1
