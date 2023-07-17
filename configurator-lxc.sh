@@ -78,8 +78,8 @@ echo -e "\e[1;34m  para añadir las integraciones necesarias para llevar a cabo 
 
 sleep 5
 echo
-read -n 1 -p "Presiona cualquier tecla para continuar con el script:"
-   echo -e "\e[0;32mContinuando con la configuración...\e[0m"
+read -p "Presiona cualquier tecla para continuar con el script..."
+echo -e "\e[0;32mContinuando con la configuración...\e[0m"
 
 
 sleep 2
