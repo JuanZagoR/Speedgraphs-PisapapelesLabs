@@ -78,10 +78,10 @@ echo -e "\e[1;34m  para añadir las integraciones necesarias para llevar a cabo 
 
 sleep 5
 echo
-read -p "Presiona cualquier tecla para continuar con el script..." -n1 -s
+read -p "Presiona cualquier tecla para continuar con el script..." -n 1 -s
+
+
 echo -e "\e[0;32mContinuando con la configuración...\e[0m"
-
-
 sleep 2
 echo
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
