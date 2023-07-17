@@ -77,13 +77,12 @@ echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la 
 echo -e "\e[1;34m  para añadir las integraciones necesarias para llevar a cabo las pruebas de velocidad"
 
 sleep 5
-echo
-echo "Presiona cualquier tecla para continuar con el script:"
-read -s -n 1
+read -n 1 -r -s -p $'Presiona cualquier tecla para continuar con el script:\n'
 echo -e "\e[0;32mContinuando con la configuración...\e[0m"
-echo 
+
 
 sleep 2
+echo
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
 cd /mnt/Docker/Speedgraphs/Config
 sudo mv configuration.yaml backup.configuration.yaml
