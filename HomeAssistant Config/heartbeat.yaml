@@ -128,15 +128,15 @@
 ###################################### Ping hacia servidores/dispositivos en red local ######################################
 
 ###### Ping - Router ######
-  - platform: ping
-    host: 0.0.0.0
-    name: "Heartbeat - RouterCasa"
-    count: 1
-    scan_interval: 1
+#  - platform: ping
+#    host: 0.0.0.0
+#    name: "Heartbeat - RouterCasa"
+#    count: 1
+#    scan_interval: 1
 
 ###### Ping - DNS Privado ######
-  - platform: ping
-    host: 0.0.0.0
-    name: "Heartbeat - DNS Privado"
-    count: 1
-    scan_interval: 1
+#  - platform: ping
+#    host: 0.0.0.0
+#    name: "Heartbeat - DNS Privado"
+#    count: 1
+#    scan_interval: 1
