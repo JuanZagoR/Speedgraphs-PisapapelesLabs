@@ -77,12 +77,9 @@ echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la 
 echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad."
 
 sleep 5
-echo
-read -n1 -s -r -p $'Presiona 'y' para continuar con el script, o cualquier otra tecla para salir:\n' key
-if [ "$key" = 'y' ]; then
-    echo -e "\e[0;32mContinuando con la configuración...\e[0m"
-    sleep 1
-    curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
-else
-    echo -e "\e[1;36mConsulta la documentación para terminar la configuración. Gracias por usar este script.\e[0m"
-fi
+echo Presiona 'ESPACIO' para continuar con el script:
+read -r -s -d ' '
+
+echo -e "\e[0;32mContinuando con la configuración...\e[0m"
+sleep 1
+curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
