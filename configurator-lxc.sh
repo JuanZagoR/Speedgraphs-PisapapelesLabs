@@ -77,7 +77,7 @@ echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la 
 echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad."
 
 sleep 5
-echo Presiona 'ESPACIO' para continuar con el script:
+echo "Presiona 'ESPACIO' para continuar con el script:"
 read -r -s -d ' '
 
 echo -e "\e[0;32mContinuando con la configuración...\e[0m"
