@@ -1,7 +1,15 @@
 #!/bin/bash
+set -e
+echo -e "\e[1;35mSpeedgraphs - Pisapapeles Labs\e[0m"
+sleep 1
+echo -e "\e[0;35mPost-Install 0.1 - Alpha\e[0m"
+sleep 2
+
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
 cd /mnt/Docker/Speedgraphs/Config
-sudo mv configuration.yaml backup.configuration.yaml
+echo -e "\e[1;36m➤ Respaldando configuración existente...\e[0m"
+sudo mkdir BackupConfig
+sudo cp *.yaml BackupConfig/
 sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/configuration.yaml -O configuration.yaml && echo -e "\e[0;32m✔ Archivo de configuración reemplazado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al reemplazar el archivo\e[0m"
 sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/fastdotcom.yaml -O fastdotcom.yaml && echo -e "\e[0;32m✔ Configuración de Fast.com añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de Fast.com\e[0m"
 sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/heartbeat.yaml -O heartbeat.yaml && echo -e "\e[0;32m✔ Configuración de Heartbeat añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de Heartbeat\e[0m"
