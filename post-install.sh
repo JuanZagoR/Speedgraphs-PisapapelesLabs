@@ -15,6 +15,7 @@ sleep 1
 sudo mkdir /mnt/Docker/Speedgraphs/Config/BackupConfig
 yes | sudo cp -i /mnt/Docker/Speedgraphs/Config/*.yaml /mnt/Docker/Speedgraphs/Config/BackupConfig
 echo -e "\e[0;32m✔ Configuración anterior respaldada \e[0m"
+echo
 
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
 cd /mnt/Docker/Speedgraphs/Config
