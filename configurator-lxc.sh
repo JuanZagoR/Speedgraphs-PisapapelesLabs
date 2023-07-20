@@ -74,23 +74,15 @@ docker logs PPLabs-HomeAssistant-Prod && echo -e "\e[0;32m✔ Contenedor funcion
 echo
 echo -e "\e[1;34m➤ Configura la instancia de Home Assistant de este servidor, a través de http://$(hostname  -I | cut -f1 -d' '):8123\e[0m"
 echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la configuración de Home Assistant"
-echo -e "\e[1;34m  para añadir las integraciones necesarias para llevar a cabo las pruebas de velocidad"
+echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad."
 
 sleep 5
 echo
-read -n 1 -s -r -p "Presiona cualquier tecla para continuar con el script..."
-echo -e "\e[0;32mContinuando con la configuración...\e[0m"
-
-sleep 2
-echo
-echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
-cd /mnt/Docker/Speedgraphs/Config
-sudo mv configuration.yaml backup.configuration.yaml
-sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/configuration.yaml -O configuration.yaml && echo -e "\e[0;32m✔ Archivo de configuración reemplazado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al reemplazar el archivo\e[0m"
-sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/fastdotcom.yaml -O fastdotcom.yaml && echo -e "\e[0;32m✔ Configuración de Fast.com añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de Fast.com\e[0m"
-sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/heartbeat.yaml -O heartbeat.yaml && echo -e "\e[0;32m✔ Configuración de Heartbeat añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de Heartbeat\e[0m"
-sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/influxdb.yaml -O influxdb.yaml && echo -e "\e[0;32m✔ Configuración de InfluxDB añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de InfluxDB\e[0m"
-sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/iperf3.yaml -O iperf3.yaml && echo -e "\e[0;32m✔ Configuración de iPerf3 añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de iPerf3\e[0m"
-
-echo
-echo -e "\e[1;36mConsulta la documentación para terminar la configuración. Gracias por usar este script.\e[0m"
+read -n1 -s -r -p $'Presiona 'y' para continuar con el script, o cualquier otra tecla para salir:\n' key
+if [ "$key" = 'y' ]; then
+    echo -e "\e[0;32mContinuando con la configuración...\e[0m"
+    sleep 1
+    curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
+else
+    echo -e "\e[1;36mConsulta la documentación para terminar la configuración. Gracias por usar este script.\e[0m"
+fi
