@@ -79,6 +79,7 @@ echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo la
 sleep 5
 echo "Presiona ESPACIO para continuar con el script:"
 read -r -s -d ' '
+sleep 1
 echo -e "\e[0;32mContinuando con la configuración...\e[0m"
 sleep 1
 curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
