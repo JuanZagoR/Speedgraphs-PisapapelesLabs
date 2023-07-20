@@ -79,6 +79,7 @@ echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo la
 sleep 5
 echo "Presiona 'y' para continuar con el script, o 'n' para cerrarlo:"
 read -s -n 1 key
+
 case $key in
     y|Y)
         echo -e "\e[0;32mContinuando con la configuración...\e[0m"
