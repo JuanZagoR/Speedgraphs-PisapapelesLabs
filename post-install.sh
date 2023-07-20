@@ -5,11 +5,16 @@ sleep 1
 echo -e "\e[0;35mPost-Install 0.1 - Alpha\e[0m"
 sleep 2
 
-echo -e "\e[1;36m➤ Respaldando configuración existente...\e[0m"
+echo -e "\e[1;36m➤ Eliminando respaldo antiguo existente...\e[0m"
+sudo rm -rf /mnt/Docker/Speedgraphs/Config/BackupConfig && echo -e "\e[0;32m✔ Respaldo antiguo eliminado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al eliminar el respaldo antiguo\e[0m"
+
+echo -e "\e[1;36m➤ Respaldando configuración actual...\e[0m"
 sudo mkdir /mnt/Docker/Speedgraphs/Config/BackupConfig
+
 yes | sudo cp -i /mnt/Docker/Speedgraphs/Config/*.yaml /mnt/Docker/Speedgraphs/Config/BackupConfig
 echo
 echo -e "\e[0;32m✔ Configuración anterior respaldada \e[0m"
+
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
 cd /mnt/Docker/Speedgraphs/Config
 sudo wget -q https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/configuration.yaml -O configuration.yaml && echo -e "\e[0;32m✔ Archivo de configuración reemplazado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al reemplazar el archivo\e[0m"
