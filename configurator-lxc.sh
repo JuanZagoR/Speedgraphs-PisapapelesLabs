@@ -74,17 +74,10 @@ docker logs PPLabs-HomeAssistant-Prod && echo -e "\e[0;32m✔ Contenedor funcion
 echo
 echo -e "\e[1;34m➤ Configura la instancia de Home Assistant de este servidor, a través de http://$(hostname  -I | cut -f1 -d' '):8123\e[0m"
 echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la configuración de Home Assistant"
-echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad."
+echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad.\e[0m"
 
 sleep 5
-echo "Para interrupir el script, presiona CTRL+C"
-sleep 5
-echo "Este script continuará en 15 segundos"
-sleep 12
-echo "Este script continuará en 3 segundos"
-sleep 1
-echo "Este script continuará en 2 segundos"
-sleep 1
-echo "Este script continuará en 1 segundo..."
-sleep 1
+echo -e "\e[1;33m➤ La configuración continuará automáticamente en 15 segundos. Para interrupir el script, presiona CTRL+C\e[0m"
+sleep 15
+echo -e "\e[1;36m➤ Continuando script...\e[0m"
 curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
