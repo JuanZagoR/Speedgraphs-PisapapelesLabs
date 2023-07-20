@@ -77,20 +77,34 @@ echo -e "\e[1;34m  Una vez configurada la instancia, este script modificará la 
 echo -e "\e[1;34m  añadiendo las integraciones necesarias para llevar a cabo las pruebas de velocidad."
 
 sleep 5
-echo "Presiona 'y' para continuar con el script, o 'n' para cerrarlo:"
-read -s -n 1 key
-
-case $key in
-    y|Y)
-        echo -e "\e[0;32mContinuando con la configuración...\e[0m"
-        sleep 1
-        curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash
-        ;;
-    n|N)
-        echo -e "\e[1;36mConsulta la documentación para terminar la configuración. Gracias por usar este script.\e[0m"
-        exit 1
-        ;;
-    *)
-        echo "Entrada inválida, presiona 'y' para continuar con el script, o 'n' para cerrarlo:"
-        ;;
-esac
+echo "Este script continuará en 15 segundos"
+sleep 1
+echo "Este script continuará en 14 segundos"
+sleep 1
+echo "Este script continuará en 13 segundos"
+sleep 1
+echo "Este script continuará en 12 segundos"
+sleep 1
+echo "Este script continuará en 11 segundos"
+sleep 1
+echo "Este script continuará en 10 segundos"
+sleep 1
+echo "Este script continuará en 9 segundos"
+sleep 1
+echo "Este script continuará en 8 segundos"
+sleep 1
+echo "Este script continuará en 7 segundos"
+sleep 1
+echo "Este script continuará en 6 segundos"
+sleep 1
+echo "Este script continuará en 5 segundos"
+sleep 1
+echo "Este script continuará en 4 segundos"
+sleep 1
+echo "Este script continuará en 3 segundos"
+sleep 1
+echo "Este script continuará en 2 segundos"
+sleep 1
+echo "Este script continuará en 1 segundo"
+sleep 1
+curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh | sudo bash

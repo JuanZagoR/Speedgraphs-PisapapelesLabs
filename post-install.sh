@@ -1,6 +1,4 @@
 #!/bin/bash
-sleep 2
-echo
 echo -e "\e[1;36m➤ Obteniendo archivos de configuración personalizados para Home Assistant\e[0m"
 cd /mnt/Docker/Speedgraphs/Config
 sudo mv configuration.yaml backup.configuration.yaml
