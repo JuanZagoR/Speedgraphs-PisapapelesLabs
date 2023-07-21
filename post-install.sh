@@ -29,9 +29,9 @@ sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-Pisapapeles
 echo
 
 echo -e "\e[1;36m➤ Descargando scripts para modificar los archivos de configuración\e[0m"
-sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/influxdb.sh -O /tmp/Speedgraphs/influxdb.sh && echo -e "\e[0;32m✔ Script de InfluxDB descargado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al descargar el script de configuración\e[0m"
+sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/influxdb.sh -O /tmp/influxdb.sh && echo -e "\e[0;32m✔ Script de InfluxDB descargado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al descargar el script de configuración\e[0m"
 sleep 1
-sudo bash /tmp/Speedgraphs/influxdb.sh
+sudo bash /tmp/influxdb.sh
 
 echo
 echo -e "\e[1;33mConsulta la documentación oficial en github.com/JuanZagoR/Speedgraphs-PisapapelesLabs para terminar la configuración.\e[0m"
