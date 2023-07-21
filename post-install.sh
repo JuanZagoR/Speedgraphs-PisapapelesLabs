@@ -6,7 +6,7 @@ echo -e "\e[0;35mPost-Install 0.1 - Alpha\e[0m"
 sleep 2
 echo
 
-echo -e "\e[1;36m➤ Eliminando respaldo antiguo existente...\e[0m"
+echo -e "\e[1;36m➤ Eliminando respaldo antiguo de configuración (en caso de existir)...\e[0m"
 sleep 1
 sudo rm -rf /mnt/Docker/Speedgraphs/Config/BackupConfig && echo -e "\e[0;32m✔ Respaldo antiguo eliminado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al eliminar el respaldo antiguo\e[0m"
 echo
@@ -25,10 +25,13 @@ sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-Pisapapeles
 sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/HomeAssistant%20Config/heartbeat.yaml -O heartbeat.yaml && echo -e "\e[0;32m✔ Configuración de Heartbeat añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de Heartbeat\e[0m"
 sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/HomeAssistant%20Config/influxdb.yaml -O influxdb.yaml && echo -e "\e[0;32m✔ Configuración de InfluxDB añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de InfluxDB\e[0m"
 sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/HomeAssistant%20Config/iperf3.yaml -O iperf3.yaml && echo -e "\e[0;32m✔ Configuración de iPerf3 añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de iPerf3\e[0m"
+sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/HomeAssistant%20Config/http.yaml -O http.yaml && echo -e "\e[0;32m✔ Configuración de HTTP añadida \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al añadir la configuración de HTTP\e[0m"
 echo
 
 echo -e "\e[1;36m➤ Descargando scripts para modificar los archivos de configuración\e[0m"
-
+sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/influxdb.sh -O /tmp/Speedgraphs/influxdb.sh && echo -e "\e[0;32m✔ Script de InfluxDB descargado \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al descargar el script de configuración\e[0m"
+sleep 1
+sudo bash /tmp/Speedgraphs/influxdb.sh
 
 echo
 echo -e "\e[1;33mConsulta la documentación oficial en github.com/JuanZagoR/Speedgraphs-PisapapelesLabs para terminar la configuración.\e[0m"
