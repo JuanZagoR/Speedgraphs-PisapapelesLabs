@@ -80,4 +80,6 @@ sleep 5
 echo -e "\e[1;33m➤ La configuración continuará automáticamente en 15 segundos. Para interrupir el script, presiona CTRL+C\e[0m"
 sleep 15
 echo -e "\e[1;36m➤ Continuando script...\e[0m"
-sudo curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh > /tmp/post-install.sh && sudo bash /tmp/post-install.sh
+sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh -O /tmp/post-install.sh 
+cd /tmp
+sudo bash /tmp/post-install.sh
