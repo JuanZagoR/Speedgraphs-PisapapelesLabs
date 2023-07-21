@@ -59,7 +59,7 @@ fi
 ###### Tag ######
 echo
 echo -e "\e[1;36m➤ Ingrese el tag (sin espacios) que asignará a esta instancia de Home Assistant:\e[0m"
-echo -e "\e[1;30m  Ejemplo: Operador01-MundoClawomistelTR\e[0m"
+echo -e "\e[1;30m  Ejemplo: Operador01-StarMundoClawomistelTR\e[0m"
 read -p " " replace
 
 if [[ $tag != "" && $replace != "" ]]; then
