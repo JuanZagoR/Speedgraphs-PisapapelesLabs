@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ###### Tags a reemplazar ######
 filename="influxdb.yaml"
 host="influxdb.paginadeprueba.com"
@@ -8,18 +7,24 @@ organization="xxxxxxxxxxxxxxxx"
 bucket="Bucket"
 tag="HomeAssistant"
 
+set -e
+echo -e "\e[1;35mSpeedgraphs - Pisapapeles Labs\e[0m"
+sleep 1
+echo -e "\e[0;35mInfluxDB Configurator 0.1 - Alpha\e[0m"
+sleep 2
 
+echo -e "\e[1;36m➤ Este script configurará la plantilla de InfluxDB para enviar las métricas a su base de datos\e[0m"
+sleep 3
 
-echo -e "\e[1;36m➤ Este script configurará la plantilla de InfluxDB para enviar los datos a su base de datos\e[0m"
-sleep 5
+cd /mnt/Docker/Speedgraphs/Config
 
 ###### Host ######
 echo
-echo -e "\e[1;36m➤ Ingrese la dirección de la instancia de InfluxDB:\e[0m"
+echo -e "\e[1;36m➤ Ingrese la dirección del host (o instancia) de InfluxDB:\e[0m"
 echo -e "\e[1;30m  Ejemplo: influxdb.paginadeprueba.com\e[0m"
 read -p " " replace
 if [[ $host != "" && $replace != "" ]]; then
-  sed -i "s/$host/$replace/" $filename && echo -e "\e[0;32m✔ Host añadido al archivo \e[0m"
+  sed -i "s/$host/$replace/" $filename && echo -e "\e[0;32m✔ Host añadido al archivo \e[0m" || echo -e "\e[0;31m✖ Hubo un problema al reemplazar el host\e[0m"
 fi
 
 ###### Token ######
@@ -33,7 +38,7 @@ fi
 
 ###### Organización ######
 echo
-echo -e "\e[1;36m➤ Ingrese (en hexadecimal) la organización a la que serán enviados los datos:\e[0m"
+echo -e "\e[1;36m➤ Ingrese la 'organización' a la que serán enviados los datos (en hexadecimal):\e[0m"
 echo -e "\e[1;30m  Ejemplo: e9f7c9b3b3ef015e\e[0m"
 read -p " " replace
 
