@@ -47,7 +47,7 @@ echo
 
 sleep 2
 echo -e "\e[1;36m➤ Creando carpetas y descargando imagen de Home Assistant...\e[0m"
-sudo mkdir -p /mnt/Docker/Speedgraphs
+sudo mkdir -p /mnt/Docker/Speedgraphs/Scripts
 sudo chmod 777 -R /mnt/Docker/Speedgraphs
 cd /mnt/Docker/Speedgraphs && echo -e "\e[0;32m✔ Directorios creados\e[0m" || echo -e "\e[0;31m✖ Error al acceder al directorio\e[0m"
 
@@ -80,6 +80,6 @@ sleep 5
 echo -e "\e[1;33m➤ La configuración continuará automáticamente en 15 segundos. Para interrupir el script, presiona CTRL+C\e[0m"
 sleep 15
 echo -e "\e[1;36m➤ Continuando script...\e[0m"
-sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh -O /tmp/post-install.sh 
-cd /tmp
-sudo bash /tmp/post-install.sh
+sudo wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/post-install.sh -O /mnt/Docker/Speedgraphs/Scripts/post-install.sh 
+cd /mnt/Docker/Speedgraphs/Scripts
+sudo bash post-install.sh
