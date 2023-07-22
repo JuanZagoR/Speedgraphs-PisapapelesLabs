@@ -10,18 +10,48 @@ max_exceeded: silent
 
 input:
   delay_pruebas:
-    name: Retardo (en segundos) entre dos pruebas
+    name: Retardo entre pruebas
+    description: Retardo entre dos pruebas de un mismo servicio.
+    default: 5
+    selector:
+      number:
+        min: 0
+        max: 60
+        unit_of_measurement: seconds
+  
   delay_servicios:
-    name: Retardo (en segundos) entre dos servicios
-  iperf_servidor1:
-    name: Dirección del primer servidor iPerf3
-  iperf_servidor2:
-    name: Dirección del segundo servidor iPerf3
-  iperf_servidor3:
-    name: Dirección del tercer servidor iPerf3
-  iperf_servidor4:
-    name: Dirección del cuarto servidor iPerf3
+    name: Retardo entre servicios
+    description: Retardo entre dos pruebas de distintos servicios o instancias.
+    default: 20
+    selector:
+      number:
+        min: 0
+        max: 60
+        unit_of_measurement: seconds
 
+  iperf_servidor1:
+    name: iPerf3 - Servidor 1
+    description: Dirección del primer servidor iPerf3
+    selector:
+      text:
+
+  iperf_servidor2:
+    name: iPerf3 - Servidor 2
+    description: Dirección del segundo servidor iPerf3
+    selector:
+      text:
+
+  iperf_servidor3:
+    name: iPerf3 - Servidor 3
+    description: Dirección del tercer servidor iPerf3
+    selector:
+      text:
+
+  iperf_servidor4:
+    name: iPerf3 - Servidor 4
+    description: Dirección del cuarto servidor iPerf3
+    selector:
+      text:
 
 trigger:
   - platform: time
