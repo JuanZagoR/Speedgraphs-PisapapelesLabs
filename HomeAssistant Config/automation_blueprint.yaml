@@ -8,7 +8,7 @@ blueprint:
 mode: restart
 max_exceeded: silent
 
-variables:
+input:
   delay_pruebas:
     name: Retardo (en segundos) entre dos pruebas
   delay_servicios:
