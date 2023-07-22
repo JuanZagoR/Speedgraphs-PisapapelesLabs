@@ -1,0 +1,53 @@
+blueprint:
+  name: Speedgraphs - Pisapapeles Labs
+  description: Pruebas periódicas de velocidad de internet. Esta plantilla ejecuta todo el set de pruebas para Speedgraphs.
+  domain: automation
+  source_url: https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/automation_blueprint.yaml
+  author: JuanZagoR
+
+trigger:
+  - platform: time
+    at: "00:00:00"
+condition: []
+action:
+  - service: fastdotcom.speedtest
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - service: iperf3.speedtest
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id:
+        - sensor.speedtest_ping
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id: sensor.speedtest_download
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id:
+        - sensor.speedtest_upload
+
+mode: restart
+max_exceeded: silent
