@@ -20,8 +20,11 @@ En este repositorio se encuentra una serie de scripts que permiten configurar r�
 
 Estos scripts se encargarán de instalar las dependencias faltantes, descargar las plantillas necesarias para hacerlos funcionar, y modificar los archivos de configuración para habilitar las integraciones.
 
+Para ello, abrimos una sesión SSH y nos conectamos al host
+Posteriormente, 
+
 
 
 ``` bash
-curl -fsSL https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/configurator-lxc.sh > /tmp/configurator.sh && sudo bash configurator.sh
+wget -q https://raw.githubusercontent.com/JuanZagoR/Speedgraphs-PisapapelesLabs/dev/configurator-lxc.sh -O configurator.sh && sudo bash configurator.sh
 ```
