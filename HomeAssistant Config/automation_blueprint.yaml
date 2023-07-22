@@ -3,51 +3,155 @@ blueprint:
   description: Pruebas periódicas de velocidad de internet. Esta plantilla ejecuta todo el set de pruebas para Speedgraphs.
   domain: automation
   source_url: https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/automation_blueprint.yaml
-  author: JuanZagoR
+  author: Pisapapeles Labs
+
+mode: restart
+max_exceeded: silent
+
+variables:
+  delay_pruebas:
+    name: Retardo (en segundos) entre dos pruebas
+  delay_servicios:
+    name: Retardo (en segundos) entre dos servicios
+  iperf_servidor1:
+    name: Dirección del primer servidor iPerf3
+  iperf_servidor2:
+    name: Dirección del segundo servidor iPerf3
+  iperf_servidor3:
+    name: Dirección del tercer servidor iPerf3
+  iperf_servidor4:
+    name: Dirección del cuarto servidor iPerf3
+
 
 trigger:
   - platform: time
     at: "00:00:00"
-condition: []
+  - platform: time
+    at: "01:00:00"
+  - platform: time
+    at: "02:00:00"
+  - platform: time
+    at: "03:00:00"
+  - platform: time
+    at: "04:00:00"
+  - platform: time
+    at: "05:00:00"
+  - platform: time
+    at: "06:00:00"
+  - platform: time
+    at: "07:00:00"
+  - platform: time
+    at: "08:00:00"
+  - platform: time
+    at: "09:00:00"
+  - platform: time
+    at: "10:00:00"
+  - platform: time
+    at: "11:00:00"
+  - platform: time
+    at: "12:00:00"
+  - platform: time
+    at: "13:00:00"
+  - platform: time
+    at: "14:00:00"
+  - platform: time
+    at: "15:00:00"
+  - platform: time
+    at: "16:00:00"
+  - platform: time
+    at: "17:00:00"
+  - platform: time
+    at: "18:00:00"
+  - platform: time
+    at: "19:00:00"
+  - platform: time
+    at: "20:00:00"
+  - platform: time
+    at: "21:00:00"
+  - platform: time
+    at: "22:00:00"
+  - platform: time
+    at: "23:00:00"
+
+
+condition:
+
+
 action:
   - service: fastdotcom.speedtest
     data: {}
+
   - delay:
       hours: 0
       minutes: 0
-      seconds: 20
+      seconds: !input delay_servicios
       milliseconds: 0
+
   - service: iperf3.speedtest
-    data: {}
+    data:
+      host: !input iperf_servidor1
+
   - delay:
       hours: 0
       minutes: 0
-      seconds: 20
+      seconds: !input delay_servicios
       milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor2
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor3
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor4
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
   - service: homeassistant.update_entity
     data: {}
     target:
       entity_id:
         - sensor.speedtest_ping
+
   - delay:
       hours: 0
       minutes: 0
-      seconds: 20
+      seconds: !input delay_pruebas
       milliseconds: 0
+
   - service: homeassistant.update_entity
     data: {}
     target:
       entity_id: sensor.speedtest_download
+
   - delay:
       hours: 0
       minutes: 0
-      seconds: 20
+      seconds: !input delay_pruebas
       milliseconds: 0
+
   - service: homeassistant.update_entity
     data: {}
     target:
       entity_id:
         - sensor.speedtest_upload
-
-mode: restart
-max_exceeded: silent
