@@ -53,6 +53,16 @@ input:
     selector:
       text: {}
 
+
+variables:
+  delay_pruebas: !input delay_pruebas
+  delay_servicios: !input delay_servicios
+  iperf_servidor1: !input iperf_servidor1
+  iperf_servidor2: !input iperf_servidor2
+  iperf_servidor3: !input iperf_servidor3
+  iperf_servidor4: !input iperf_servidor4
+
+
 trigger:
   - platform: time
     at: "00:00:00"
