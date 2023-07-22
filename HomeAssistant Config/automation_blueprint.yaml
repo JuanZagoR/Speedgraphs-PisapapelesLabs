@@ -33,25 +33,25 @@ input:
     name: iPerf3 - Servidor 1
     description: Dirección del primer servidor iPerf3
     selector:
-      text:
+      text: {}
 
   iperf_servidor2:
     name: iPerf3 - Servidor 2
     description: Dirección del segundo servidor iPerf3
     selector:
-      text:
+      text: {}
 
   iperf_servidor3:
     name: iPerf3 - Servidor 3
     description: Dirección del tercer servidor iPerf3
     selector:
-      text:
+      text: {}
 
   iperf_servidor4:
     name: iPerf3 - Servidor 4
     description: Dirección del cuarto servidor iPerf3
     selector:
-      text:
+      text: {}
 
 trigger:
   - platform: time
