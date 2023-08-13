@@ -1,28 +1,85 @@
-# [En construcción]
-- id: '1674262565638'
-  alias: Speedgraphs-PisapapelesLabs
-  description: ''
+- id: '1681973279969'
+  alias: Speedgraphs - Pisapapeles Labs
+  description: 'Automatización que ejecuta todo el set de pruebas para Speedgraphs.'
   trigger:
-  - platform: time_pattern
-    minutes: '30'
+  - platform: time
+    at: 00:00:00
+  - platform: time
+    at: 01:00:00
+  - platform: time
+    at: 02:00:00
+  - platform: time
+    at: 03:00:00
+  - platform: time
+    at: 04:00:00
+  - platform: time
+    at: 05:00:00
+  - platform: time
+    at: 06:00:00
+  - platform: time
+    at: 07:00:00
+  - platform: time
+    at: 08:00:00
+  - platform: time
+    at: 09:00:00
+  - platform: time
+    at: '10:00:00'
+  - platform: time
+    at: '11:00:00'
+  - platform: time
+    at: '12:00:00'
+  - platform: time
+    at: '13:00:00'
+  - platform: time
+    at: '14:00:00'
+  - platform: time
+    at: '15:00:00'
+  - platform: time
+    at: '16:00:00'
+  - platform: time
+    at: '17:00:00'
+  - platform: time
+    at: '18:00:00'
+  - platform: time
+    at: '19:00:00'
+  - platform: time
+    at: '20:00:00'
+  - platform: time
+    at: '21:00:00'
+  - platform: time
+    at: '22:00:00'
+  - platform: time
+    at: '23:00:00'
   condition: []
   action:
-  - service: fastdotcom.speedtest
-    data: {}
+  - service: iperf3.speedtest
+    data:
+      host: speedtest.pisapapeleslabs.com
   - delay:
       hours: 0
       minutes: 0
-      seconds: 15
+      seconds: 10
       milliseconds: 0
   - service: iperf3.speedtest
-    data: {}
+    data:
+      host: speedtest2.pisapapeleslabs.com
   - delay:
       hours: 0
       minutes: 0
-      seconds: 15
+      seconds: 10
       milliseconds: 0
   - service: homeassistant.update_entity
     data: {}
     target:
-      device_id: 07f234732cd4fddc67f02338b2e086f6
-  mode: single
+      entity_id:
+      - sensor.speedtest_download
+      - sensor.speedtest_ping
+      - sensor.speedtest_upload
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - service: fastdotcom.speedtest
+    data: {}
+  mode: restart

@@ -1,0 +1,197 @@
+blueprint:
+  name: Speedgraphs - Pisapapeles Labs
+  description: Pruebas periódicas de velocidad de internet. Esta plantilla ejecuta todo el set de pruebas para Speedgraphs.
+  domain: automation
+  source_url: https://github.com/JuanZagoR/Speedgraphs-PisapapelesLabs/blob/dev/HomeAssistant%20Config/automation_blueprint.yaml
+  author: Pisapapeles Labs
+
+mode: restart
+max_exceeded: silent
+
+input:
+  delay_pruebas:
+    name: Retardo entre pruebas
+    description: Retardo entre dos pruebas de un mismo servicio.
+    default: 5
+    selector:
+      number:
+        min: 0
+        max: 60
+        unit_of_measurement: seconds
+  
+  delay_servicios:
+    name: Retardo entre servicios
+    description: Retardo entre dos pruebas de distintos servicios o instancias.
+    default: 20
+    selector:
+      number:
+        min: 0
+        max: 60
+        unit_of_measurement: seconds
+
+  iperf_servidor1:
+    name: iPerf3 - Servidor 1
+    description: Dirección del primer servidor iPerf3
+    selector:
+      text: {}
+
+  iperf_servidor2:
+    name: iPerf3 - Servidor 2
+    description: Dirección del segundo servidor iPerf3
+    selector:
+      text: {}
+
+  iperf_servidor3:
+    name: iPerf3 - Servidor 3
+    description: Dirección del tercer servidor iPerf3
+    selector:
+      text: {}
+
+  iperf_servidor4:
+    name: iPerf3 - Servidor 4
+    description: Dirección del cuarto servidor iPerf3
+    selector:
+      text: {}
+
+
+variables:
+  delay_pruebas: !input delay_pruebas
+  delay_servicios: !input delay_servicios
+  iperf_servidor1: !input iperf_servidor1
+  iperf_servidor2: !input iperf_servidor2
+  iperf_servidor3: !input iperf_servidor3
+  iperf_servidor4: !input iperf_servidor4
+
+
+trigger:
+  - platform: time
+    at: "00:00:00"
+  - platform: time
+    at: "01:00:00"
+  - platform: time
+    at: "02:00:00"
+  - platform: time
+    at: "03:00:00"
+  - platform: time
+    at: "04:00:00"
+  - platform: time
+    at: "05:00:00"
+  - platform: time
+    at: "06:00:00"
+  - platform: time
+    at: "07:00:00"
+  - platform: time
+    at: "08:00:00"
+  - platform: time
+    at: "09:00:00"
+  - platform: time
+    at: "10:00:00"
+  - platform: time
+    at: "11:00:00"
+  - platform: time
+    at: "12:00:00"
+  - platform: time
+    at: "13:00:00"
+  - platform: time
+    at: "14:00:00"
+  - platform: time
+    at: "15:00:00"
+  - platform: time
+    at: "16:00:00"
+  - platform: time
+    at: "17:00:00"
+  - platform: time
+    at: "18:00:00"
+  - platform: time
+    at: "19:00:00"
+  - platform: time
+    at: "20:00:00"
+  - platform: time
+    at: "21:00:00"
+  - platform: time
+    at: "22:00:00"
+  - platform: time
+    at: "23:00:00"
+
+
+condition:
+
+
+action:
+  - service: fastdotcom.speedtest
+    data: {}
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor1
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor2
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor3
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: iperf3.speedtest
+    data:
+      host: !input iperf_servidor4
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_servicios
+      milliseconds: 0
+
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id:
+        - sensor.speedtest_ping
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_pruebas
+      milliseconds: 0
+
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id: sensor.speedtest_download
+
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: !input delay_pruebas
+      milliseconds: 0
+
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id:
+        - sensor.speedtest_upload

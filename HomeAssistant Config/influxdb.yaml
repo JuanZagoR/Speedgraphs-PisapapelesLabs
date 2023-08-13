@@ -13,34 +13,34 @@
 
 
 ###### Versión de API a utilizar ######
-api_version: 2
+ api_version: 2
 
 ###### Activar o desactivar conexión HTTPS ######
-ssl: true
+ ssl: true
 
 ###### Dirección IP y puerto, o dominio donde se encuentra InfluxDB ######
-host: influxdb.paginadeprueba.com
+ host: influxdb.paginadeprueba.com
 #port: 8086
 
 ###### Token de acceso, organización y "bucket" donde se almacenarán los datos ######
-token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-organization: xxxxxxxxxxxxxxxx
-bucket: Bucket
-default_measurement: units
-tags:
-  source: HomeAssistant
+ token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ organization: xxxxxxxxxxxxxxxx
+ bucket: Bucket
+ default_measurement: units
+ tags:
+   source: HomeAssistant
 
 ###### Lista de entidades incluidas y excluidas ######
-exclude:
-  entities:
-   - zone.home
-  domains:
-    - persistent_notification
-    - person
-include:
-  domains:
-    - sensor
-    - binary_sensor
-    - sun
-  entities:
-    - weather.home
+ exclude:
+   entities:
+    - zone.home
+   domains:
+     - persistent_notification
+     - person
+ include:
+   domains:
+     - sensor
+     - binary_sensor
+     - sun
+   entities:
+     - weather.home

@@ -1,0 +1,15 @@
+###################################### Plantilla de OpenSpeedTest ######################################
+
+################ Documentación ##################
+# https://hub.docker.com/r/openspeedtest/latest #
+
+version: '3.3'
+services:
+    openspeedtest:
+        image: openspeedtest/latest
+        container_name: PPLabs-OpenSpeedTest-Prod
+        network_mode: bridge
+        ports:
+            - '3000:3000'
+            - '3001:3001'
+        restart: unless-stopped
